@@ -2,7 +2,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        GbLL<Integer> ll = new GbLL<Integer>();
+
+        IntLL<Integer> ll = new GbLL<>();
+
+        ll.addFirst(444).addLast(555).addLast(666).addLast(777).addLast(888);
+
         System.out.println(ll.getSize());
         System.out.println("=================================");
         ll.addFirst(13);
@@ -16,8 +20,8 @@ public class Main {
         System.out.println("=================================");
         System.out.println(ll.get( 1));
         System.out.println("=================================");
-        for (Integer item : ll) {
-            System.out.print(" " + item);
+        for (int i = 0; i < ll.getSize(); i++) {
+            System.out.print(" " + ll.get(i));
         }
 
     }

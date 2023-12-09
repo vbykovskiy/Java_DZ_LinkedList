@@ -1,11 +1,11 @@
 import java.util.Iterator;
 
 public interface IntLL<E> {
-    public void addFirst(E data);
-    public void addLast(E data);
-    public void remove(int index);
-    public E get(int index);
-    public int getSize();
-    public Iterator<E> iterator();
-    public String toString();
+    GbLL<E> addFirst(E data);
+    GbLL<E> addLast(E data);
+    GbLL<E> remove(int index);
+    E get(int index);
+    int getSize();
+    Iterator<E> iterator();
+    String toString();
 }

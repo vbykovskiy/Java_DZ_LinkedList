@@ -24,7 +24,7 @@ public class GbLL<E> implements IntLL<E>, Iterable<E> {
     }
 
     // Метод для вставки элемента в начало списка
-    public void addFirst(E data) {
+    public GbLL<E> addFirst(E data) {
         Node<E> newNode = new Node<>(data);
         if (size == 0) {
             head = newNode;
@@ -35,10 +35,11 @@ public class GbLL<E> implements IntLL<E>, Iterable<E> {
             head = newNode;
         }
         size++;
+        return this;
     }
 
     // Метод для вставки элемента в конец списка
-    public void addLast(E data) {
+    public GbLL<E> addLast(E data) {
         Node<E> newNode = new Node<>(data);
         if (size == 0) {
             head = newNode;
@@ -49,6 +50,7 @@ public class GbLL<E> implements IntLL<E>, Iterable<E> {
             tail = newNode;
         }
         size++;
+        return this;
     }
 
     // Метод для получения размера списка
@@ -71,7 +73,7 @@ public class GbLL<E> implements IntLL<E>, Iterable<E> {
     }
 
     // Метод для удаления элемента по индексу
-    public void remove(int index) {
+    public GbLL<E> remove(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Индекс выходит за пределы списка");
         }
@@ -95,6 +97,7 @@ public class GbLL<E> implements IntLL<E>, Iterable<E> {
             current.next.prev = current.prev;
         }
         size--;
+        return this;
     }
 
     // Реализация интерфейса Iterable
